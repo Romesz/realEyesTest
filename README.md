@@ -4,5 +4,5 @@ Requirement:
 Run:
  * npm i
  * npm run xmlServe
- * npm run watch
+ * npm run build
  * npm run serve

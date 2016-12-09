@@ -137,7 +137,7 @@ It’s possible that you might have some errors/problems with Rickshaw. In this 
     let graph = new Rickshaw.Graph( {
       element: document.getElementById('chart'),
       width: window.innerWidth / 2,
-      height: 500,
+      height: 300,
       renderer: 'line',
       series: [
         {
