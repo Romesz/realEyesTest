@@ -124,6 +124,7 @@ It’s possible that you might have some errors/problems with Rickshaw. In this 
   }
 
   window.showGraph = function(e) {
+    clearGraph();
     let selectedCurr;
     if (e.options === undefined) {
       selectedCurr = e;
@@ -162,4 +163,10 @@ It’s possible that you might have some errors/problems with Rickshaw. In this 
     });
     axes.render();
   };
+
+  function clearGraph() {
+    // Graph has to be delete otherwise data will be just attached
+    document.getElementById('chart').innerHTML = '';
+    document.getElementById('legend').innerHTML = '';
+  }
 })();

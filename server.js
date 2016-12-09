@@ -20,7 +20,6 @@ function getXml(req, res) {
     let $ = cheerio.load(body, {
       xmlMode: true
     });
-    //console.log($);
 
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET');
