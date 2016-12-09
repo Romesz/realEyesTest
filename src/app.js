@@ -85,7 +85,11 @@ It’s possible that you might have some errors/problems with Rickshaw. In this 
     }
     let firstCurr = parseFloat(selects[0].value);
     let secondCurr = parseFloat(selects[1].value);
-    res.innerHTML = `The result is ${ammount * secondCurr / firstCurr}`;
+    let retVal = ammount * secondCurr / firstCurr;
+    if (retVal !== parseInt(retVal, 10)) {
+      retVal = retVal.toFixed(4);
+    }
+    res.innerHTML = `The result is ${retVal}`;
   };
 
   function fetchGraphData(currency) {
@@ -103,7 +107,6 @@ It’s possible that you might have some errors/problems with Rickshaw. In this 
     for(let i in cubeTimes) {
       if (cubeTimes.hasOwnProperty(i)) {
         let cubeTime = cubeTimes[i];
-        //let time = cubeTime.getAttribute('time');
         let time = arrayToSort[counter];
         counter++;
         let innerCube = cubeTime.querySelectorAll('Cube');
