@@ -1,0 +1,5 @@
+dist/*js
+dist/*js.map
+node_modules
+data.xml
+graph.html

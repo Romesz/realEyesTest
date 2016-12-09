@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      main {
+        margin: 20px 20px;
+      }
+      .form-group {
+        width: 50%;
+      }
+      .form-control {
+        width: 200px;
+        margin-bottom: 5px;
+      }
+      p {
+        margin-top: 5px;
+      }
+      #calc {
+        min-height: 200px;
+      }
+    </style>
+    <script src="lib/d3.v3.js"></script>
+    <script src="lib/rickshaw.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id="calc" class="form-group">
+        <label for="ammount">Ammount</label>
+        <input type="number" id="ammount" class="form-control">
+        <select id="source" class="form-control"></select>
+        <select id="target" class="form-control"></select>
+        <input type="submit" onclick="submitCalc()" value="calculate" type="button" class="btn btn-primary">
+        <p id="res"></p>
+      </div>
+
+      <div id="graph">
+        <p>Choose currency to see graph</p>
+        <select id="source" class="form-control" onchange="showGraph(this)"></select>
+        <div id="chart_container">
+          <div id="chart"></div>
+          <div id="legend_container">
+            <div id="smoother" title="Smoothing"></div>
+            <div id="legend"></div>
+          </div>
+          <div id="slider"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
